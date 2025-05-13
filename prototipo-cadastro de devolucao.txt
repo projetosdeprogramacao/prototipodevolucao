@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Devolução</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+
+  <div class="bg-white p-6 rounded shadow-md max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold">Cadastrar Devolução</h1>
+    </div>
+
+    <form class="space-y-6">
+
+      <!-- Dados Automáticos do Requisitante -->
+      <div>
+        <label class="block font-medium text-gray-700">Unidade Gestora (UG)</label>
+        <input class="border p-2 rounded" type="text" id="ug" placeholder="UG" disabled value="Unidade 001">
+      </div>
+      <div>
+        <label class="block font-medium text-gray-700">Almoxarifado</label>
+        <input class="border p-2 rounded" type="text" id="almoxarifado" placeholder="Almoxarifado" disabled value="Almoxarifado Central">
+      </div>
+      <div>
+        <label class="block font-medium text-gray-700">Unidade Requisitante</label>
+        <input class="border p-2 rounded" type="text" id="unidade-requisitante" placeholder="Unidade Requisitante" disabled value="Unidade A">
+      </div>
+      <div>
+        <label class="block font-medium text-gray-700">Data de Emissão</label>
+        <input class="border p-2 rounded" type="date" id="data-emissao" value="2025-05-13" disabled>
+      </div>
+
+      <!-- Seleção de PIMs Disponíveis para Devolução -->
+      <div>
+        <label class="block font-medium text-gray-700">PIM para Devolução</label>
+        <select class="border p-2 rounded" id="pim-select">
+          <option value="">Selecione o PIM</option>
+          <!-- Exemplos de PIMs disponíveis -->
+          <option value="PIM123">PIM 123 - Material A</option>
+          <option value="PIM124">PIM 124 - Material B</option>
+        </select>
+      </div>
+
+      <!-- Detalhes do Material Selecionado -->
+      <div>
+        <label class="block font-medium text-gray-700">Material</label>
+        <input class="border p-2 rounded" type="text" id="material" placeholder="Material" disabled>
+      </div>
+
+      <div>
+        <label class="block font-medium text-gray-700">Quantidade</label>
+        <input class="border p-2 rounded" type="number" id="quantidade" placeholder="Quantidade" required>
+      </div>
+
+      <!-- Data da Devolução -->
+      <div>
+        <label class="block font-medium text-gray-700">Data de Devolução</label>
+        <input class="border p-2 rounded" type="date" id="data-devolucao" value="2025-05-13">
+      </div>
+
+      <!-- Botões -->
+      <div class="mt-6 flex gap-4">
+        <button class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800" type="submit">Cadastrar Devolução</button>
+        <button class="border border-gray-400 px-6 py-2 rounded hover:bg-gray-100" type="reset">Limpar</button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
